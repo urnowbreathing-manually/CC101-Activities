@@ -7,7 +7,7 @@ int triangleAreaCalculator();
 
 int main(){ //Main Function; calls other functions in the program
     int functionSelect = 0;
-    char functionTitle[3][26] = {"Rectangle Area Calculator", "Triangle Area Calculator", "Exit Program"};
+    char functionTitle[3][26] = {"Rectangle Area Calc", "Triangle Area Calc", "Exit Program"};
 
     //Program startup text
     printf("[]================(Assignment #5)================[]\n");
@@ -75,7 +75,16 @@ int rectangleAreaCalculator(){ //Write a C program that will compute the area of
 
     //UI text for readability
     printf("[]=================(Program  #1)=================[]\n");
-    printf("             Rectangle Area Calculator\n\n");
+    printf("             Rectangle Area Calculator\n");
+    printf("  Formula:\n   - Area of a Rectangle = (Length * Width)\n\n");
+    printf("                ____________________\n");
+    printf("               |                    |\n");
+    printf("               |                    |\n");
+    printf("               | < Width            |\n"); // Visualization of a rectangle
+    printf("               |                    |\n");
+    printf("               |                    |\n");
+    printf("               |____________________|\n");
+    printf("                      ^ Length\n\n");
 
     return 0;
 }
@@ -85,6 +94,18 @@ int triangleAreaCalculator(){ //Write a C program that will compute the area of 
     //UI text for readability
     printf("[]=================(Program  #2)=================[]\n");
     printf("             Triangle Area Calculator\n\n");
+    printf("  Formula:\n   - Area of a Triangle  = [(Base * Height) / 2]\n\n");
+    printf("                       X\n");
+    printf("                      /|\\\n");
+    printf("                     / | \\\n");
+    printf("                    /  |  \\\n");
+    printf("                   /   |   \\\n");
+    printf("                  /    | < Height\n"); //Visualization of a triangle
+    printf("                 /     |     \\\n");
+    printf("                /      |      \\\n");
+    printf("               /       |       \\\n");
+    printf("              /________X________\\\n");
+    printf("                         ^ Base\n\n");
 
     return 0;
 }
