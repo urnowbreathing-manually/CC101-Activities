@@ -98,7 +98,7 @@ int rectangleAreaCalculator(){ //Write a C program that will compute the area of
     printf("               |____________________|\n");
     printf("                      ^ Length\n\n");
 
-    //Asks for user input to select function
+    //Asks for user to input rectangle length and width
     printf("[]====================(Input)====================[]\n\n");
     for(int i = 0; i < 2; i++){
         printf("  Insert Rectangle %s: ", rectangleNouns[i]);
@@ -110,8 +110,11 @@ int rectangleAreaCalculator(){ //Write a C program that will compute the area of
 
     }
 
+    //Displays inputs that the user made
     printf("  Selected %s and %s: ", rectangleNouns[0], rectangleNouns[1]);
     printf("[%.2lf u], [%.2lf u]\n\n\n", rectangleLF - atof(rectangleChar), atof(rectangleChar));
+
+    //Calculates Area of the rectangle and prints it for the user to see
     printf("[]===================(Output)====================[]\n\n");
     printf("  Area of Rectangle = [%.2lf u] * [%.2lf u]\n", rectangleLF - atof(rectangleChar), atof(rectangleChar));
     printf("  Area of Rectangle = [%.2lf square units]\n\n\n\n", (rectangleLF - atof(rectangleChar)) * atof(rectangleChar));
@@ -143,8 +146,28 @@ int triangleAreaCalculator(){ //Write a C program that will compute the area of 
     printf("              /________X________\\\n");
     printf("                         ^ Base\n\n");
 
-    //Asks for user input to select function
-    printf("[]====================(Input)====================[]\n");
+    //Asks for user to input triangle base length and height
+    printf("[]====================(Input)====================[]\n\n");
+    for(int i = 0; i < 2; i++){
+        printf("  Insert Triangle %s: ", triangleNouns[i]);
+
+        //Gets user input in string, with max size of 11 bytes
+        fgets(triangleChar, 11, stdin);
+        //Converts user input string of numbers to lf values and assigns it to triangleLF
+        triangleLF = atof(triangleChar) + triangleLF;
+
+    }
+
+    //Displays inputs that the user made
+    printf("  Selected %s and %s: ", triangleNouns[0], triangleNouns[1]);
+    printf("[%.2lf u], [%.2lf u]\n\n\n", triangleLF - atof(triangleChar), atof(triangleChar));
+
+    //Calculates Area of the triangle and prints it for the user to see
+    printf("[]===================(Output)====================[]\n");
+    printf("                       [%.2lf u] * [%.2lf u]\n", triangleLF - atof(triangleChar), atof(triangleChar));
+    printf("  Area of Triangle = ----------------------------\n");
+    printf("                                   2\n\n");
+    printf("  Area of Triangle = [%.2lf square units]\n\n", ((triangleLF - atof(triangleChar)) * atof(triangleChar)) / 2);
 
     return 0;
 }
